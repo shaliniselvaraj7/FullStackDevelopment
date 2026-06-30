@@ -1,36 +1,12 @@
-package SwitchCase;
-import java.util.*;
+package Chp7;
+
 public class Calculator {
-	public static void main(String[] args) {
-		int a =10;
-		int b=20;
-		Scanner sc= new Scanner(System.in);
-		System.out.println("1. Addition");
-		System.out.println("2. Subtraction");
-		System.out.println("3. Multiplication");
-		System.out.println("4. Division");
-		System.out.println("Enter your choice:");
-		int choice= sc.nextInt();
-		switch (choice) {
-		case 1:
-			System.out.println("The Addition:"+(a+b));
-			break;
-		case 2:
-			System.out.println("The Subtraction:"+(a-b));
-			break;
-		case 3: 
-			System.out.println("The Multiplication:"+(a*b));
-			break;
-		case 4:
-			System.out.println("The Division:"+(a/b));
-			break;
-		default:
-			System.out.println("Invalid choice!");
-			
-			
-		
-		
-		}
+
+	public static int add(int num1,int num2) {
+		return num1+num2;
+	}
+	public static int sub(int n1, int n2) {
+		return n1-n2;
 	}
 
 }
