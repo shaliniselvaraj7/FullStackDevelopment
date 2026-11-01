@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Bill Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #e6e6fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            color: rgb(9, 102, 9);
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        h3 {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>Shopping Bill</h1>
+
+        <p>Product: Headphones</p>
+        <p>Price: ₹600</p>
+        <p>Quantity: 2</p>
+        <p>Discount: 10%</p>
+
+        <hr>
+
+        <h3>Subtotal: ₹1200</h3>
+        <h3>Discount: ₹120</h3>
+        <h3>Final Amount: ₹1080</h3>
+
+    </div>
+
+
+    <script>
+
+        let productName = "Headphones";
+        let price = 600;
+        let quantity = 2;
+        let discount = 10;
+
+        function calculateSubtotal(price, quantity) {
+            return price * quantity;
+        }
+
+        function calculateDiscount(subtotal, discount) {
+
+            if (subtotal >= 1000) {
+                return subtotal * discount / 100;
+            }
+            else {
+                return 0;
+            }
+
+        }
+
+
+        let subtotal = calculateSubtotal(price, quantity);
+
+        let discountAmount = calculateDiscount(subtotal, discount);
+
+        let finalAmount = subtotal - discountAmount;
+
+
+        console.log("Product Name: " + productName);
+        console.log("Price: ₹" + price);
+        console.log("Quantity: " + quantity);
+        console.log("Discount: " + discount + "%");
+
+        console.log("Subtotal: ₹" + subtotal);
+        console.log("Discount Amount: ₹" + discountAmount);
+        console.log("Final Amount: ₹" + finalAmount);
+
+    </script>
+
+</body>
+</html>

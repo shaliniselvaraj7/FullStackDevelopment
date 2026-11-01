@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Salary Calculator</title>
+
+    
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #e6e6fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            width: 320px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            color: rgb(245, 0, 114);
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        h3 {
+            color: rgb(173, 17, 103);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>Employee Salary Card</h1>
+
+        <p>Employee Name: Priya</p>
+        <p>Basic Salary: ₹28000</p>
+        <p>Allowance: ₹5000</p>
+
+        <hr>
+
+        <h3>Gross Salary: ₹33000</h3>
+        <h3>Deduction: ₹1650</h3>
+        <h3>Net Salary: ₹31350</h3>
+
+    </div>
+
+
+    
+    <script>
+
+        
+        let employeeName = "Priya";
+        let basicSalary = 28000;
+        let allowance = 5000;
+
+        function calculateGrossSalary(basic, allowance) {
+            return basic + allowance;
+        }
+
+        function calculateDeduction(gross) {
+
+            if (gross > 30000) {
+                return gross * 5 / 100;
+            }
+            else {
+                return gross * 2 / 100;
+            }
+
+        }
+
+
+        let grossSalary = calculateGrossSalary(basicSalary, allowance);
+
+        let isGrossAbove30000 = grossSalary > 30000;
+
+        let deduction = calculateDeduction(grossSalary);
+
+        let netSalary = grossSalary - deduction;
+
+        console.log("Employee Name: " + employeeName);
+        console.log("Basic Salary: ₹" + basicSalary);
+        console.log("Allowance: ₹" + allowance);
+
+        console.log("Gross Salary: ₹" + grossSalary);
+
+        console.log("Is Gross Salary Above 30000? " + isGrossAbove30000);
+
+        console.log("Deduction: ₹" + deduction);
+
+        console.log("Net Salary: ₹" + netSalary);
+
+    </script>
+
+</body>
+</html>

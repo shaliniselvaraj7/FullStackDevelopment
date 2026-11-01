@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #e6e6fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            color: rgb(6, 6, 87);
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        h3 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>Student Result Card</h1>
+
+        <p>Student Name: Arun</p>
+        <p>Course: JavaScript</p>
+
+        <hr>
+
+        <p>Maths: 80</p>
+        <p>Science: 75</p>
+        <p>English: 85</p>
+
+        <h3>Total: 240</h3>
+        <h3>Average: 80</h3>
+
+    </div>
+
+
+    <script>
+
+        let studentName = "Arun";
+        let course = "JavaScript";
+
+        let maths = 80;
+        let science = 75;
+        let english = 85;
+
+
+        function calculateTotal(m1, m2, m3) {
+            return m1 + m2 + m3;
+        }
+
+
+        function calculateAverage(total, subjects) {
+            return total / subjects;
+        }
+
+
+        let total = calculateTotal(maths, science, english);
+
+        let average = calculateAverage(total, 3);
+
+        console.log("Student Name: " + studentName);
+        console.log("Course: " + course);
+
+        console.log("Maths: " + maths);
+        console.log("Science: " + science);
+        console.log("English: " + english);
+
+        console.log("Total Marks: " + total);
+        console.log("Average Marks: " + average);
+
+    </script>
+
+</body>
+</html>

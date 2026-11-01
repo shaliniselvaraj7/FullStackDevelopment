@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #e6e6fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            width: 320px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            color: orangered;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        h3 {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>Electricity Bill</h1>
+
+        <p>Customer Name: Kumar</p>
+        <p>Units Consumed: 150</p>
+        <p>Rate Per Unit: ₹3</p>
+
+        <hr>
+
+        <h3>Bill Amount: ₹450</h3>
+
+    </div>
+
+
+    <script>
+
+        let customerName = "Kumar";
+        let units = 150;
+
+
+        function getRate(units) {
+
+            if (units <= 100) {
+                return 2;
+            }
+            else if (units <= 200) {
+                return 3;
+            }
+            else {
+                return 5;
+            }
+
+        }
+
+
+        function calculateBill(units, rate) {
+            return units * rate;
+        }
+
+
+        let rate = getRate(units);
+
+        let billAmount = calculateBill(units, rate);
+
+        console.log("Customer Name: " + customerName);
+        console.log("Units Consumed: " + units);
+        console.log("Rate Per Unit: ₹" + rate);
+        console.log("Bill Amount: ₹" + billAmount);
+
+    </script>
+
+</body>
+</html>

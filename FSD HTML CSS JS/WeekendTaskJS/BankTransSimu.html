@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Transaction Simulator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #e6e6fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            width: 320px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            color:blueviolet;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        h3 {
+            color: rebeccapurple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>Bank Account</h1>
+
+        <p>Account Holder: Ravi</p>
+        <p>Initial Balance: ₹5000</p>
+        <p>Deposit Amount: ₹1000</p>
+        <p>Withdrawal Amount: ₹2000</p>
+
+        <hr>
+
+        <h3>Balance After Deposit: ₹6000</h3>
+        <h3>Final Balance: ₹4000</h3>
+
+    </div>
+
+
+    <script>
+
+      
+        let accountHolder = "Ravi";
+        let balance = 5000;
+
+        let depositAmount = 1000;
+        let withdrawalAmount = 2000;
+
+        function depositMoney(balance, amount) {
+            return balance + amount;
+        }
+
+
+        function withdrawMoney(balance, amount) {
+
+            if (balance >= amount) {
+                return balance - amount;
+            }
+            else {
+                return balance;
+            }
+
+        }
+
+
+        let initialBalance = balance;
+
+
+        balance = depositMoney(balance, depositAmount);
+
+        let balanceAfterDeposit = balance;
+
+        let isWithdrawalAllowed = balance >= withdrawalAmount;
+
+
+        let finalBalance = withdrawMoney(balance, withdrawalAmount);
+
+
+        console.log("Account Holder: " + accountHolder);
+
+        console.log("Initial Balance: ₹" + initialBalance);
+
+        console.log("Deposit Amount: ₹" + depositAmount);
+
+        console.log("Balance After Deposit: ₹" + balanceAfterDeposit);
+
+        console.log("Withdrawal Amount: ₹" + withdrawalAmount);
+
+        console.log("Is Withdrawal Allowed? " + isWithdrawalAllowed);
+
+        console.log("Final Balance: ₹" + finalBalance);
+
+    </script>
+
+</body>
+</html>
